@@ -1,0 +1,35 @@
+RewriteEngine on
+Options -Indexes
+
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
+DirectoryIndex  index.php 
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteBase /amp/
+
+RewriteRule ^trang-chu.html$ http://%{HTTP_HOST} [L,R=301]
+RewriteRule ^index.html$ http://%{HTTP_HOST} [L,R=301]
+RewriteRule ^sitemap.xml$ sitemap.php [L]
+#DirectoryIndex index.php
+RewriteRule ^admin$ admin/index.php [L]
+RewriteRule ^admin/$ admin/index.php [L]
+#RewriteRule ^upload/sanpham/(.*\.(jp?g|gif|png))$ watermark.php?image=$1 [L]
+#Chu thich
+#wm: 0 no watermark, 1 is watermark
+#wl: location watermark - 1: top-left - 2: top-right - 3: bottom-right - 4: bottom-left - 5: center
+#wmr: boundary distance
+#RewriteRule ^dongdau/([0-9]+)x([0-9]+)/([0-9]+)/(.*)$  timthumb_watermark.php?src=http://%{HTTP_HOST}/$4&h=$2&w=$1&zc=$3&q=100&wm=1&wl=3&wmr=0
+RewriteRule ^thumb/([0-9]+)x([0-9]+)/([0-9]+)/(.*)$ timthumb.php?w=$1&h=$2&zc=$3&q=100&src=http://%{HTTP_HOST}/$4  [L]
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)-([0-9]+)$ index.php?com=$1&id=$3  [L]
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)-([0-9]+)&p=([0-9]+)$ index.php?com=$1&id=$3&p=$4  [L]
+RewriteRule ^([a-zA-Z0-9_-]+)$ index.php?com=$1  [L]
+RewriteRule ^([a-zA-Z0-9_-]+)&p=([0-9]+)$ index.php?com=$1&p=$2  [L]
+RewriteRule ^([a-zA-Z0-9_-]+)/$ index.php?com=$1  [L]
+RewriteRule ^([a-zA-Z0-9_-]+)/&p=([0-9]+)$ index.php?com=$1&p=$2  [L]
+RewriteRule ^([a-zA-Z0-9_-]+).html&keyword=(.*)$ index.php?com=$1&keyword=$2  [L]
+RewriteRule ^([a-zA-Z0-9_-]+).html&keyword=(.*)&p=([0-9]+)$ index.php?com=$1&keyword=$2&p=$3  [L]
+RewriteRule ^([a-zA-Z0-9_-]+)&pid=(.*)&command=(.*)$	index.php?com=$1&pid=$2&command=$3 [L]

@@ -1,0 +1,46 @@
+.tieude_form {
+    text-align: center;
+    text-transform: uppercase;
+    background: url(../images/bg_tieude_gt.png) no-repeat bottom center;
+	font-family: 'robotobold';
+    font-size: 20px;
+    color: #0079cb;
+    margin-bottom: 3%;
+}
+#login_error {
+    display: none;
+    background: red;
+    color: #FFF;
+}
+.datxe_form .txt_input {
+    border: 0 none;
+    border-radius: 5px;
+    box-shadow: 0 0 2px #ccc;
+    height: 30px;
+    margin-bottom: 5px;
+    outline: 0 none;
+    padding: 0 5px;
+    width: 97.8%;
+    transition: 0.2s;
+}
+.datxe_form .trea_loinhan {
+    border: 0 none;
+    border-radius: 5px;
+    box-shadow: 0 0 2px #ccc;
+    height: 100px;
+    margin-bottom: 5px;
+    outline: 0 none;
+    padding: 0 5px;
+    width: 97.8%;
+    padding: 5px;
+}
+.datxe_form .btn_gui_datxe {
+    background: #008cd0;
+    color: #FFF;
+    text-transform: uppercase;
+    height: 30px;
+    width: 100%;
+    margin: auto;
+    border: 0;
+    border-radius: 5px;
+}

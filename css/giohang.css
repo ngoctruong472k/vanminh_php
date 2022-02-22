@@ -1,0 +1,42 @@
+/* Gio Hang */
+#box_cart div.wap_pro{padding: 20px; margin: 0;}
+
+.title_cart{font-family: 'RobotoCondensed-Bold';font-weight: 100;font-size: 18px;color: #000;text-transform: uppercase;border-bottom: 1px solid #ddd;display: block;width: 100%;padding: 0 0 10px 0;margin-bottom: 20px;position: relative;}
+.title_cart:after{position: absolute; content: ''; width: 100px; height: 2px; bottom: -1px; left: 0; background: #ff0c14;}
+
+.table_cart{border: none;width: 100%;border-spacing: 0;border-collapse: collapse;}
+/* head */
+.table_cart thead tr th {background: #787878;color: #fff;line-height: 40px;text-align: center;border: none;font-family: 'RobotoCondensed-Bold';font-weight: 100;font-size: 16px;text-transform: capitalize;}
+/* Body */
+.table_cart tbody tr { border-bottom: 1px solid #e0e0e0;}
+.table_cart tbody tr td{padding: 10px 10px;}
+.table_cart tbody tr td:not(.item) {text-align: center;}
+.table_cart tbody .item a{display: block;}
+.table_cart tbody .item a:first-child{font-family: Roboto-Regular;font-weight: 100;}
+.table_cart tbody .item a:first-child:hover{color: #d90000 !important;}
+.table_cart tbody .item .click-delete{font-weight: 100;font-size: 14px;font-family: Roboto-Regular;color: #d90000;display: inline-block;}
+
+.table_cart tbody .qty label{display: block;}
+.table_cart tbody .qty input{display: inline-block;width: 50px;padding: 6px;border: 1px solid #ddd;border-radius: 5px;}
+
+.table_cart tbody .single_price b,.table_cart tbody .price{font-family: Roboto-Bold; font-size: 15px; color: #d90000;}
+
+.table_cart .summary td{padding: 10px 0;font-family: 'Roboto-Bold';font-size: 15px;font-weight: 100;}
+
+.bottom_cart{text-align: right; display: block; width: 100%; padding: 10px 0;}
+.bottom_cart a{display: inline-block;padding: 8px 20px;border-radius: 5px;font-size: 15px;color: #fff;font-family: Roboto-Light;}
+.bottom_cart a i{margin: 0 10px;}
+.bottom_cart a:nth-child(1){background: #787878;}
+.bottom_cart a:nth-child(1):hover{background: #000000;}
+.bottom_cart a:nth-child(2){background: #ff0000;}
+.bottom_cart a:nth-child(2):hover{background: #d90000;}
+
+.empty{text-align: center;width: 100%;}
+.empty img{display: table; margin: 0 auto;}
+.empty label{display: block; margin: 10px 0;}
+.empty a{font-size: 15px;color: #fff;background: #ff0000;padding: 8px 30px;border-radius: 5px;}
+.empty a:hover{background: #d90000;}
+
+@media(max-width: 600px){
+    .table_cart tr .image,.table_cart tr .price,.table_cart tr .title_c{display: none;}
+}
